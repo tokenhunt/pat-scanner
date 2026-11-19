@@ -8,7 +8,7 @@ Pre-commit hooks catch leaks at git time. PAT Scanner catches them at chat time 
 
 ```bash
 # Add the marketplace (one-time)
-/plugin marketplace add JordanNewell/pat-scanner
+/plugin marketplace add tokenhunt/pat-scanner
 
 # Install
 /plugin install pat-scanner
@@ -17,7 +17,7 @@ Pre-commit hooks catch leaks at git time. PAT Scanner catches them at chat time 
 Or clone and link locally:
 
 ```bash
-git clone https://github.com/JordanNewell/pat-scanner.git ~/pat-scanner
+git clone https://github.com/tokenhunt/pat-scanner.git ~/pat-scanner
 /plugin marketplace add ~/pat-scanner
 /plugin install pat-scanner
 ```
@@ -138,7 +138,7 @@ BUSL-1.1 © Jordan Newell — source-available; converts to MIT on 2030-10-12. S
 
 pat-scanner is the one-command guard: one hook, 13 credential classes, regex matching.
 
-[token-hunt](https://github.com/JordanNewell/token-hunt) is the engine underneath — the Python package, the `scan / list / close / watch` CLI, six hooks with block-and-rotate behavior, the allowlist, and the bash escape-hatch runtime detector for the `${VAR:+SET}${VAR:-UNSET}` class regex can't see. Install pat-scanner for the guard; run token-hunt when you want the full scanner and rotation workflow.
+[token-hunt](https://github.com/tokenhunt/token-hunt) is the engine underneath — the Python package, the `scan / list / close / watch` CLI, six hooks with block-and-rotate behavior, the allowlist, and the bash escape-hatch runtime detector for the `${VAR:+SET}${VAR:-UNSET}` class regex can't see. Install pat-scanner for the guard; run token-hunt when you want the full scanner and rotation workflow.
 
 ## Roadmap
 

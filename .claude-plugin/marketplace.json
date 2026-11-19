@@ -25,9 +25,9 @@
       ],
       "source": {
         "source": "url",
-        "url": "https://github.com/JordanNewell/pat-scanner.git"
+        "url": "https://github.com/tokenhunt/pat-scanner.git"
       },
-      "homepage": "https://github.com/JordanNewell/pat-scanner"
+      "homepage": "https://github.com/tokenhunt/pat-scanner"
     }
   ]
 }

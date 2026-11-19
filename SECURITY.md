@@ -10,7 +10,7 @@ PAT Scanner is itself a security tool. We take bugs seriously, especially:
 - **Pattern injection** — input that crashes `grep -E` or causes regex catastrophic backtracking
 
 **Report privately:** open a private security advisory at
-https://github.com/JordanNewell/pat-scanner/security/advisories/new
+https://github.com/tokenhunt/pat-scanner/security/advisories/new
 
 Or email: security@jordannewell.com (PGP key at https://jordannewell.com/pgp.asc)
 
