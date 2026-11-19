@@ -69,7 +69,7 @@ gh pr create
 ## Development setup
 
 ```bash
-git clone https://github.com/JordanNewell/pat-scanner.git
+git clone https://github.com/tokenhunt/pat-scanner.git
 cd pat-scanner
 bash tests/test-scan-secrets.sh  # must pass on clone
 ```

@@ -7,8 +7,8 @@
     "name": "Jordan Newell",
     "url": "https://jordannewell.com"
   },
-  "homepage": "https://github.com/JordanNewell/pat-scanner",
-  "repository": "https://github.com/JordanNewell/pat-scanner",
+  "homepage": "https://github.com/tokenhunt/pat-scanner",
+  "repository": "https://github.com/tokenhunt/pat-scanner",
   "license": "BUSL-1.1",
   "keywords": [
     "security",

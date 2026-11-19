@@ -70,5 +70,5 @@ If the patterns file is missing or unreadable, the scanner exits 0 (passes throu
 
 ## Related
 
-- Source: https://github.com/JordanNewell/pat-scanner
+- Source: https://github.com/tokenhunt/pat-scanner
 - Author: Jordan Newell (https://jordannewell.com)
