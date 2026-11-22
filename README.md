@@ -52,7 +52,7 @@ cp ~/pat-scanner/patterns/secret-patterns.local ~/.config/secret-patterns.local
 $EDITOR ~/.config/secret-patterns.local
 ```
 
-Your user file takes precedence over plugin defaults — survives plugin updates.
+Your user file takes precedence over plugin defaults — survives plugin updates. To point at an explicit file instead, set `$PAT_SCANNER_PATTERNS` (checked first, before the user and plugin files).
 
 ### Add a new pattern
 
@@ -93,6 +93,25 @@ The patterns file uses POSIX ERE (`grep -E`) — not PCRE. Three silent-failure 
 3. **No `[[:space:]]` inside bracket expressions.** `[\`'"[[:space:]];]` looks right but the inner `]` closes the bracket early. Use separate alternation: `([\`'";]|[[:space:]]|...)`.
 
 If a pattern isn't matching, smoke-test with `echo "<sample>" | grep -E "<pattern>"` BEFORE adding it.
+
+## How it works
+
+Claude Code fires the hook (`hooks/scan-secrets.sh`) on every `UserPromptSubmit`, piping the prompt as JSON on stdin. The script extracts the prompt text with `jq`, tests it against each POSIX ERE pattern, and:
+
+- **exit 0** — pass (no match, bypass keyword present, or patterns file missing — fail-open)
+- **exit 2** — BLOCK; stderr names the matched pattern class and the block is appended to the audit log
+
+## Repo layout
+
+```
+hooks/scan-secrets.sh       The scanner (bash, no deps beyond jq/grep)
+hooks/hooks.json            Plugin hook registration (UserPromptSubmit)
+patterns/secret-patterns.local   Default pattern set (13 classes)
+tests/test-scan-secrets.sh  Test harness (18 cases)
+SKILL.md                    Hook architecture and extension guide
+.claude-plugin/             Plugin + marketplace manifests
+docs/                       Landing page
+```
 
 ## Audit log
 
