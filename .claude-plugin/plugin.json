@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/tokenhunt/pat-scanner",
   "repository": "https://github.com/tokenhunt/pat-scanner",
-  "license": "BUSL-1.1",
+  "license": "MIT",
   "keywords": [
     "security",
     "secrets",
